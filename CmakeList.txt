@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 2.6)
+project(SympleComputerSym VERSION 0.1.0)
+
+# Set include directories
+include_directories("/include"  
+)
+
+include_directories("/src"  
+)
+
+# Add executable
+add_executable(SympleComputerSym  src/main.cpp)
+add_executable(SympleComputerSym src/cpu.cpp)
+add_executable(SympleComputerSym src/ram.cpp)
+add_executable(SympleComputerSym src/disk.cpp)
+add_executable(SympleComputerSym src/gpu.cpp)
+add_executable(SympleComputerSym src/kbd.cpp)
+target_link_libraries(SympleComputerSym  include/kbd.h)
+target_link_libraries(SympleComputerSym  include/gpu.h)
+target_link_libraries(SympleComputerSym include/ram.h)
+target_link_libraries(SympleComputerSym include/disk.h)
+target_link_libraries(SympleComputerSym include/cpu.h)
